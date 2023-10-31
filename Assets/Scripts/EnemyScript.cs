@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    public int unitHealth = 100;
     public bool isDead = false;
     public Rigidbody2D rb;
 
@@ -25,6 +24,7 @@ public class EnemyScript : MonoBehaviour
             pathIndex++;
             if (pathIndex == GameManager.main.path.Length)
             {
+                EnemySpawner.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
                 return;
             }
@@ -32,11 +32,6 @@ public class EnemyScript : MonoBehaviour
             {
                 target = GameManager.main.path[pathIndex];
             }
-        }
-        if (unitHealth <= 0)
-        {
-            isDead = true;
-            Destroy(gameObject);
         }
     }
     private void FixedUpdate()

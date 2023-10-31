@@ -6,13 +6,12 @@ public class ProjectileScript : MonoBehaviour
 {
     public float speed;
     public Transform target;
+    public int damage = 1;
 
     private float completion;
     private float flightTime;
     private float elapsedTime;
     private float distance;
-
-    public EnemyScript enemy;
 
     private void Start()
     {
@@ -25,13 +24,10 @@ public class ProjectileScript : MonoBehaviour
         float completion = elapsedTime / flightTime;
         transform.position = Vector3.Lerp(transform.position, target.position, completion);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-    
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        enemy.unitHealth -= 5;
+        Debug.Log("john hit");
+        collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         Destroy(gameObject);
     }
 }

@@ -30,8 +30,7 @@ public class TurretProto : MonoBehaviour
         timer -= Time.deltaTime;
         foreach (GameObject enemy in gameManager.enemiesList)
         {
-
-            if (!enemy.GetComponent<EnemyScript>().isDead)
+            if (enemy) 
             {
                 if (Vector3.Distance(transform.position, enemy.transform.position) <= turretRange)
                 {
@@ -42,6 +41,7 @@ public class TurretProto : MonoBehaviour
                     turretFiring(enemy);
                 }
             }
+                
         }
 
     }
