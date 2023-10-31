@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 6302248375910402296}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.13, y: 3.47, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -8.87, y: 3.73, z: 0}
+  m_LocalScale: {x: 0.5350294, y: 0.5350294, z: 0.5350294}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8844212674505389214}
@@ -101,7 +101,7 @@ MonoBehaviour:
   turretProjectile: {fileID: 6795922605708953037, guid: b221b63489da51847b71a0c72072a2de, type: 3}
   gameManager: {fileID: 0}
   projectileSpeed: 5
-  turretRange: 8
+  turretRange: 4
   turretReload: 0.5
 --- !u!1 &7119334168809032374
 GameObject:

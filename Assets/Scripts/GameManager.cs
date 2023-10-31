@@ -5,7 +5,15 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> enemiesList = new List<GameObject>();
-    // Start is called before the first frame update
+    public static GameManager main;
+
+    public Transform startPoint;
+    public Transform[] path;
+
+    private void Awake()
+    {
+        main = this;
+    }
     void Start()
     {
         
