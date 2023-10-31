@@ -23,10 +23,14 @@ public class ProjectileScript : MonoBehaviour
         flightTime = distance / speed;
         float completion = elapsedTime / flightTime;
         transform.position = Vector3.Lerp(transform.position, target.position, completion);
+        if (!target)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("john hit");
+
         collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         Destroy(gameObject);
     }

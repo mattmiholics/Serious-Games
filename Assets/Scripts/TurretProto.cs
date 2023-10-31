@@ -23,7 +23,10 @@ public class TurretProto : MonoBehaviour
         Handles.color = Color.red;
         Handles.DrawWireDisc(transform.position, transform.forward, turretRange);
     }
-
+    private void Start()
+    {
+        gameManager = GameManager.main;
+    }
     // Update is called once per frame
     void Update()
     {
