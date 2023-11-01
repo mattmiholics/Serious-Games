@@ -17,12 +17,13 @@ public class TurretProto : MonoBehaviour
 
     private float timer = 0f;
     // Start is called before the first frame update
-
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
-        Handles.color = Color.red;
-        Handles.DrawWireDisc(transform.position, transform.forward, turretRange);
+        UnityEditor.Handles.color = Color.red;
+        UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, turretRange);
     }
+#endif
     private void Start()
     {
         gameManager = GameManager.main;
