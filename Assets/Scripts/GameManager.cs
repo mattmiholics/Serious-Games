@@ -10,18 +10,38 @@ public class GameManager : MonoBehaviour
     public Transform startPoint;
     public Transform[] path;
 
+    public int points;
+    public int lives = 100;
+
     private void Awake()
     {
         main = this;
     }
     void Start()
     {
-        
+        points = 100;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddPoints(int amount) 
     {
+        points += amount;
+    }
+    public bool SubtractPoints(int amount)
+    {
+        if (amount <= points)
+        {
+            points -= amount;
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
         
     }
+    public void LoseLives(int amount)
+    {
+        lives -= amount;
+    }
+
 }

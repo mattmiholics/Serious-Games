@@ -10,6 +10,7 @@ public class EnemyScript : MonoBehaviour
     private float moveSpeed = 2f;
     private Transform target;
     private int pathIndex = 0;
+    public int worthLives = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class EnemyScript : MonoBehaviour
             if (pathIndex == GameManager.main.path.Length)
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
+                GameManager.main.LoseLives(worthLives);
                 Destroy(gameObject);
                 return;
             }

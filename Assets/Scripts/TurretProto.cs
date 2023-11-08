@@ -15,6 +15,8 @@ public class TurretProto : MonoBehaviour
     public float turretRange = 10f;
     public float turretReload = 4f;
 
+    public int pointsRequired = 50;
+
     private float timer = 0f;
     // Start is called before the first frame update
 #if UNITY_EDITOR
