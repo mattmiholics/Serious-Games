@@ -12,6 +12,7 @@ public class TurretProto : MonoBehaviour
     [SerializeField]
     private float projectileSpeed = 20f;
 
+    public bool boosted = false;
     public float turretRange = 10f;
     public float turretReload = 4f;
 

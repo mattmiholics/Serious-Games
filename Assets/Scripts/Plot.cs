@@ -8,6 +8,7 @@ public class Plot : MonoBehaviour
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Color startColor;
     [SerializeField] private Color hoverColor;
+    [SerializeField] private GameManager gameManager;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class Plot : MonoBehaviour
 
         GameObject towerToBuild = BuildManager.main.GetSelectedTower();
         tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
+        gameManager.towersList.Add(tower);
 
     }
 }
