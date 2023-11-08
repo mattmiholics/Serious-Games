@@ -26,11 +26,12 @@ public class Plot : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (tower != null) return;
+        if (tower != null ) return;
 
         GameObject towerToBuild = BuildManager.main.GetSelectedTower();
         tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
         gameManager.towersList.Add(tower);
+
 
     }
 }
