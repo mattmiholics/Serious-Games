@@ -22,10 +22,13 @@ public class ProjectileScript : MonoBehaviour
         elapsedTime += Time.deltaTime;
         flightTime = distance / speed;
         float completion = elapsedTime / flightTime;
-        transform.position = Vector3.Lerp(transform.position, target.position, completion);
-        if (!target)
+        if (target == null)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position, target.position, completion);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

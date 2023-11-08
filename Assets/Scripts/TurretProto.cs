@@ -40,7 +40,8 @@ public class TurretProto : MonoBehaviour
                 {
                     turretFiring(enemy);
                 }
-                else if (Vector3.Distance(transform.position, enemy.transform.position) < Vector3.Distance(transform.position, enemy.transform.position))
+                else if ((Vector3.Distance(transform.position, enemy.transform.position) < Vector3.Distance(transform.position, enemy.transform.position)) 
+                    && enemy.GetComponent<Health>().hitPoints > enemy.GetComponent<Health>().hitPoints)
                 {
                     turretFiring(enemy);
                 }
