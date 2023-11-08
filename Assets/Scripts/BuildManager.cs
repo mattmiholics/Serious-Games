@@ -8,7 +8,7 @@ public class BuildManager : MonoBehaviour
 
     public GameObject[] towerPrefabs; 
 
-    private int selectedTower = 0;
+    public int selectedTower = 0;
 
     private void Awake()
     {

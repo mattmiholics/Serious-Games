@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDead: 0
   rb: {fileID: 8295264926517041637}
+  worthLives: 1
 --- !u!114 &2579484005723052386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,8 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d066f0f268a99643a4d3e59abdfc904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
+  hitPoints: 5
   isDestroyed: 0
+  pointsWorth: 0
 --- !u!50 &8295264926517041637
 Rigidbody2D:
   serializedVersion: 4

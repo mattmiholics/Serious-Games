@@ -12,11 +12,13 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float timeBetweenWaves = 5f;
     [SerializeField] private float difficultyScalar = 0.75f;
 
-    [SerializeField] private int currantWave = 1;
+    [SerializeField] public int currantWave = 1;
     [SerializeField] private float timeSinceLastSpawn;
     [SerializeField] private int enemiesAlive;
     [SerializeField] private int enemiesLeftToSpawn;
     [SerializeField] private bool isSpawning = false;
+
+    public static EnemySpawner main;
 
     public static UnityEvent onEnemyDestroy = new UnityEvent();
 
@@ -28,13 +30,14 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartWave());
+        main = this;
     }
     void Update()
     {
         if (!isSpawning) return;
         timeSinceLastSpawn += Time.deltaTime;
 
-        if (timeSinceLastSpawn >= (1f / enemiesPerSecond))
+        if (timeSinceLastSpawn >= (1f / enemiesPerSecond) && enemiesLeftToSpawn > 0)
         {
             SpawnEnemies();
 
