@@ -6648,6 +6648,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 331824273}
     m_Modifications:
+    - target: {fileID: 2493541185680220834, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5093053959085780778, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
       propertyPath: m_Name
       value: Plot

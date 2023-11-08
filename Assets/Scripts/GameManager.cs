@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> enemiesList = new List<GameObject>();
+    public List<GameObject> towersList = new List<GameObject>();
     public static GameManager main;
 
     public Transform startPoint;
