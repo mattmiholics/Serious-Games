@@ -15,8 +15,12 @@ GameObject:
   - component: {fileID: 4203930924721458617}
   - component: {fileID: -1218378293174857830}
   m_Layer: 6
+
   m_Name: Germ
-  m_TagString: Bacteria
+
+
+  m_TagString: Enemy
+
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +92,9 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+
 --- !u!50 &4981137760948949558
+
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

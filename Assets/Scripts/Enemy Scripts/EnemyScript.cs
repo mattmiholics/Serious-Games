@@ -4,12 +4,14 @@ using UnityEngine;
 
 public abstract class EnemyScript : MonoBehaviour
 {
-    public bool isSlowed = false;
     public bool isDead = false;
     public Rigidbody2D rb;
-    public float moveSpeed = 2f;
+
 
     public int worthLives;
+
+
+    public float moveSpeed;
 
 
     private Transform target;
