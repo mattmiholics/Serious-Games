@@ -38,7 +38,7 @@ public class TurretProto : MonoBehaviour
         timer -= Time.deltaTime;
         foreach (GameObject enemy in gameManager.enemiesList)
         {
-            if (enemy) 
+            if (enemy && enemy.tag == "Bacteria") 
             {
                 if (Vector3.Distance(transform.position, enemy.transform.position) <= turretRange)
                 {
