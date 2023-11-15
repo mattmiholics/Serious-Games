@@ -8025,7 +8025,7 @@ PrefabInstance:
       objectReference: {fileID: 535704003}
     - target: {fileID: 8374686707133084208, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: currantWave
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8374686707133084208, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: enemyTypes.Array.size
