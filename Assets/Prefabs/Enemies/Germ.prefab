@@ -15,12 +15,8 @@ GameObject:
   - component: {fileID: 4203930924721458617}
   - component: {fileID: -1218378293174857830}
   m_Layer: 6
-
   m_Name: Germ
-
-
-  m_TagString: Enemy
-
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,9 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-
 --- !u!50 &4981137760948949558
-
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -183,11 +177,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdaa2c421a8f6346b3acfda38f4c421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSlowed: 0
   isDead: 0
   rb: {fileID: 4981137760948949558}
-  moveSpeed: 2
   worthLives: 1
+  moveSpeed: 2
+  isSlowed: 0
   hitPoints: 5
   isDestroyed: 0
-  pointsWorth: 2
+  pointsWorth: 25

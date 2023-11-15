@@ -738,6 +738,7 @@ RectTransform:
   - {fileID: 768300965}
   - {fileID: 1053289138}
   - {fileID: 535704003}
+  - {fileID: 1355999584}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1598,7 +1599,6 @@ Transform:
   - {fileID: 1821689044}
   - {fileID: 836894417}
   - {fileID: 1631298909}
-  - {fileID: 1371877471}
   - {fileID: 331996220}
   - {fileID: 1600257383}
   - {fileID: 1006733804}
@@ -5067,7 +5067,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8108161275196998414, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
   m_PrefabInstance: {fileID: 1294412182}
   m_PrefabAsset: {fileID: 0}
-
 --- !u!1 &1355999583
 GameObject:
   m_ObjectHideFlags: 0
@@ -5143,72 +5142,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355999583}
   m_CullTransparentMesh: 1
-
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 331824273}
-    m_Modifications:
-    - target: {fileID: 4244468646459217143, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5093053959085780778, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
-      propertyPath: m_Name
-      value: Plot (93)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108161275196998414, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108161275196998414, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108161275196998414, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108161275196998414, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108161275196998414, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108161275196998414, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108161275196998414, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108161275196998414, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108161275196998414, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108161275196998414, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
---- !u!4 &1371877471 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8108161275196998414, guid: 6d5a5a802f95b954fa3431372933a8e3, type: 3}
-  m_PrefabInstance: {fileID: 1371877470}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1379035494
 GameObject:
   m_ObjectHideFlags: 0
@@ -8045,7 +7978,7 @@ PrefabInstance:
     - target: {fileID: 5388913578221132268, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: towers.Array.data[0]
       value: 
-      objectReference: {fileID: -6104068671857038350, guid: 8592980e1fbd5f4499eb85324abe921b, type: 3}
+      objectReference: {fileID: -6104068671857038350, guid: 6026549064e058c4792a55f163c44068, type: 3}
     - target: {fileID: 5388913578221132268, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: towers.Array.data[1]
       value: 
