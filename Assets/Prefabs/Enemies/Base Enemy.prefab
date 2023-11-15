@@ -15,8 +15,13 @@ GameObject:
   - component: {fileID: 5214376892777963632}
   - component: {fileID: 5521856825869656344}
   m_Layer: 6
+<<<<<<< Updated upstream:Assets/Prefabs/Enemies/Base Enemy.prefab
   m_Name: Base Enemy
   m_TagString: Enemy
+=======
+  m_Name: Enemy
+  m_TagString: Virus
+>>>>>>> Stashed changes:Assets/Prefabs/Enemy.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,6 +93,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Enemies/Base Enemy.prefab
+=======
+--- !u!114 &7022699498596795365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5450678901565826807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed14bc868cafb84c89660d001df1ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlowed: 0
+  isDead: 0
+  rb: {fileID: 8295264926517041637}
+  moveSpeed: 2
+  worthLives: 1
+--- !u!114 &2579484005723052386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5450678901565826807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d066f0f268a99643a4d3e59abdfc904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 5
+  isDestroyed: 0
+  pointsWorth: 0
+>>>>>>> Stashed changes:Assets/Prefabs/Enemy.prefab
 --- !u!50 &8295264926517041637
 Rigidbody2D:
   serializedVersion: 4
