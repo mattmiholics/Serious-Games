@@ -733,12 +733,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1355999584}
   - {fileID: 412458579}
   - {fileID: 1621564363}
   - {fileID: 768300965}
   - {fileID: 1053289138}
   - {fileID: 535704003}
-  - {fileID: 1355999584}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8025,7 +8025,7 @@ PrefabInstance:
       objectReference: {fileID: 535704003}
     - target: {fileID: 8374686707133084208, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: currantWave
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8374686707133084208, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: enemyTypes.Array.size
