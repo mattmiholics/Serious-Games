@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7777467137562026666}
   - component: {fileID: -6104068671857038350}
   m_Layer: 0
-  m_Name: Neutrophil
+  m_Name: Turret
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

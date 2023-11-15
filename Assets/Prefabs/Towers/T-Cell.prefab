@@ -99,9 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
-  damage: 1
   turretRange: 5
-<<<<<<< Updated upstream:Assets/Prefabs/Towers/T-Cell.prefab
   cost: 150
 --- !u!114 &3370924772667121246
 MonoBehaviour:
@@ -117,7 +115,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 746619374326676770}
   cost: 150
-=======
-  turretReload: 2
-  boosted: 0
->>>>>>> Stashed changes:Assets/Prefabs/T-Cell.prefab
