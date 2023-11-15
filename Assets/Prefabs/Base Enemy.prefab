@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDead: 0
-  rb: {fileID: 0}
+  rb: {fileID: 8295264926517041637}
   hitPoints: 5
   isDestroyed: 0
   pointsWorth: 25

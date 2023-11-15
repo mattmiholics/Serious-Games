@@ -6,8 +6,9 @@ public class BaseEnemy : EnemyScript
 {
         protected override void InitializeEnemy()
         {
-            // Initialization code...
-        }
+        moveSpeed = 2f; // Faster speed
+        worthLives = 1;
+    }
 
         protected override bool IsWeakAgainst(DamageType type)
         {
