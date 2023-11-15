@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4203332885273136220}
   - component: {fileID: 5535362294861423623}
-  - component: {fileID: 7777467137562026666}
   - component: {fileID: -6104068671857038350}
+  - component: {fileID: 3847408760777295571}
   m_Layer: 0
   m_Name: Neutrophil
   m_TagString: Player
@@ -86,25 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7777467137562026666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6302248375910402296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e2a69ba39ab52247a051c243b9174dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turretProjectile: {fileID: 6795922605708953037, guid: b221b63489da51847b71a0c72072a2de, type: 3}
-  gameManager: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
-  projectileSpeed: 20
-  turretDamageType: 0
-  boosted: 0
-  turretRange: 10
-  turretReload: 2
 --- !u!114 &-6104068671857038350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,3 +100,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6302248375910402296}
   cost: 50
+--- !u!114 &3847408760777295571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302248375910402296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2a69ba39ab52247a051c243b9174dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretProjectile: {fileID: 6795922605708953037, guid: b221b63489da51847b71a0c72072a2de, type: 3}
+  gameManager: {fileID: 0}
+  projectileSpeed: 20
+  turretDamageType: 0
+  boosted: 0
+  turretRange: 5
+  turretReload: 4

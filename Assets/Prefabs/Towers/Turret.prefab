@@ -103,7 +103,7 @@ MonoBehaviour:
   projectileSpeed: 20
   turretDamageType: 0
   boosted: 0
-  turretRange: 10
+  turretRange: 5
   turretReload: 2
 --- !u!114 &-6104068671857038350
 MonoBehaviour:

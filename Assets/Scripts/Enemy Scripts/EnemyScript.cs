@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class EnemyScript : MonoBehaviour
 {
     public bool isDead = false;
+    public bool isSlowed = false;
     public Rigidbody2D rb;
 
 
