@@ -9,12 +9,9 @@ public abstract class EnemyScript : MonoBehaviour
     public Rigidbody2D rb;
     public float moveSpeed = 2f;
 
-<<<<<<< Updated upstream:Assets/Scripts/Enemy Scripts/EnemyScript.cs
-    protected float moveSpeed;
-    protected int worthLives;
+    public int worthLives;
 
-=======
->>>>>>> Stashed changes:Assets/Scripts/EnemyScript.cs
+
     private Transform target;
     private int pathIndex = 0;
 

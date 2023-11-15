@@ -35,8 +35,7 @@ public class ProjectileScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
         collision.gameObject.GetComponent<EnemyScript>().TakeDamage(damage, damageType);
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 }

@@ -23,7 +23,7 @@ public class DendricCell : MonoBehaviour
 
         foreach (GameObject enemy in gameManager.enemiesList)
         {
-            if (enemy && enemy.tag == "Virus")
+            if (enemy)
             {
                 if (Vector3.Distance(transform.position, enemy.transform.position) <= turretRange)
                 {

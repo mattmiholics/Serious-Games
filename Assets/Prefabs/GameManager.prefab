@@ -78,8 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3226aedf951a66d489ff632f7602056e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab:
-  - {fileID: 5450678901565826807, guid: 4cdf868eaac6464438be4f2315f05849, type: 3}
+  enemyTypes: []
   baseEnemies: 8
   enemiesPerSecond: 0.8
   timeBetweenWaves: 5
@@ -89,6 +88,7 @@ MonoBehaviour:
   enemiesAlive: 0
   enemiesLeftToSpawn: 0
   isSpawning: 0
+  uiParent: {fileID: 0}
 --- !u!114 &5388913578221132268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,5 +103,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towers:
   - {fileID: -6104068671857038350, guid: 8592980e1fbd5f4499eb85324abe921b, type: 3}
-  - {fileID: 3370924772667121246, guid: 1e100a532e3a8d84f840e60d08cbf416, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   selectedTower: 0

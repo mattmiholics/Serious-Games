@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6097947399459022414}
   - component: {fileID: 4203930924721458617}
   - component: {fileID: 4804623249005370030}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Virus
-  m_TagString: Untagged
+  m_TagString: Virus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,8 +177,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7255da9690e775a4cbb7093b9ff1caca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSlowed: 0
   isDead: 0
   rb: {fileID: 4981137760948949558}
-  hitPoints: 10
+  moveSpeed: 2
+  worthLives: 0
+  hitPoints: 3
   isDestroyed: 0
   pointsWorth: 50

@@ -10,8 +10,10 @@ public class TurretSelector : MonoBehaviour, IPointerEnterHandler, IPointerClick
 
     private string[] towerDescriptions = {
         "Attacks and consumes viruses it comes into contact with. It's a basic but essential defense, effective against common viral enemies.",
-        "Enhances the power and range of nearby towers, representing the role of T-cells in coordinating the immune response"
-        
+        "Enhances the power and range of nearby towers, representing the role of T-cells in coordinating the immune response",
+        "Vaccine Center Description",
+        "Neutrophil Description"
+
     };
 
     public void OnPointerEnter(PointerEventData eventData)

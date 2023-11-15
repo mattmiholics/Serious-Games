@@ -100,11 +100,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretProjectile: {fileID: 6795922605708953037, guid: b221b63489da51847b71a0c72072a2de, type: 3}
   gameManager: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
-  projectileSpeed: 5
+  projectileSpeed: 20
+  turretDamageType: 0
   boosted: 0
-  turretRange: 4
-  turretReload: 1
-  cost: 50
+  turretRange: 10
+  turretReload: 2
 --- !u!114 &-6104068671857038350
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class BaseEnemy : EnemyScript
 {
         protected override void InitializeEnemy()
         {
-        moveSpeed = 2f; // Faster speed
+        moveSpeed = 2f;
         worthLives = 1;
     }
 

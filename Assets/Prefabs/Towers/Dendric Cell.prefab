@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3425747068420823740}
   - component: {fileID: 7172681317120936680}
   - component: {fileID: 3491923199610354670}
+  - component: {fileID: 3003735234002222526}
   m_Layer: 0
   m_Name: Dendric Cell
   m_TagString: Untagged
@@ -102,3 +103,17 @@ MonoBehaviour:
   turretReload: 10
   turretRange: 5
   pointsRequired: 50
+--- !u!114 &3003735234002222526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334427699518359011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a80030a0f5b7ba344864cf21cca0633a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2334427699518359011}
+  cost: 50
