@@ -14,6 +14,7 @@ public abstract class EnemyScript : MonoBehaviour
 
     public float moveSpeed;
 
+    public bool isSlowed = false;
 
     private Transform target;
     private int pathIndex = 0;

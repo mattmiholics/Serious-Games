@@ -177,11 +177,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7255da9690e775a4cbb7093b9ff1caca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSlowed: 0
   isDead: 0
   rb: {fileID: 4981137760948949558}
-  moveSpeed: 2
   worthLives: 0
+  moveSpeed: 2
+  isSlowed: 0
   hitPoints: 3
   isDestroyed: 0
   pointsWorth: 50

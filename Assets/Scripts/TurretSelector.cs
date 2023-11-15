@@ -12,7 +12,9 @@ public class TurretSelector : MonoBehaviour, IPointerEnterHandler, IPointerClick
         "Attacks and consumes viruses it comes into contact with. It's a basic but essential defense, effective against common viral enemies.",
         "Enhances the power and range of nearby towers, representing the role of T-cells in coordinating the immune response",
         "Vaccine Center Description",
-        "Neutrophil Description"
+        "Neutrophil Description",
+        "Macrophage Description",
+        "Dendric Cell Description"
 
     };
 
