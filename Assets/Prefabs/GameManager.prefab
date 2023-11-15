@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesList:
   - {fileID: 0}
+  towersList:
+  - {fileID: 6302248375910402296, guid: 8592980e1fbd5f4499eb85324abe921b, type: 3}
   startPoint: {fileID: 0}
   path:
   - {fileID: 0}
@@ -62,6 +64,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  points: 0
+  lives: 100
 --- !u!114 &8374686707133084208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,5 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46ad9ca551b4acd44b0f3934147c9629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefabs:
-  - {fileID: 6302248375910402296, guid: 8592980e1fbd5f4499eb85324abe921b, type: 3}
+  towers:
+  - {fileID: -6104068671857038350, guid: 8592980e1fbd5f4499eb85324abe921b, type: 3}
+  - {fileID: 3370924772667121246, guid: 1e100a532e3a8d84f840e60d08cbf416, type: 3}
+  selectedTower: 0

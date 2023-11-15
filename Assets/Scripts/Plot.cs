@@ -8,10 +8,12 @@ public class Plot : MonoBehaviour
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Color startColor;
     [SerializeField] private Color hoverColor;
+    [SerializeField] private Color notEnoughPointsColor;
     [SerializeField] private GameManager gameManager;
 
     void Start()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
         startColor = sr.color; 
     }
 
@@ -26,12 +28,31 @@ public class Plot : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (tower != null ) return;
+        if (tower != null) return;
 
-        GameObject towerToBuild = BuildManager.main.GetSelectedTower();
-        tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
-        gameManager.towersList.Add(tower);
+        int towerCost = BuildManager.main.GetSelectedTowerCost();
 
+        if (gameManager.SpendPoints(towerCost))
+        {
+            GameObject towerPrefab = BuildManager.main.GetSelectedTower();
+            tower = Instantiate(towerPrefab, transform.position, Quaternion.identity);
+            gameManager.towersList.Add(tower);
+        }
+        else
+        {
+            // Change color to indicate not enough points
+            sr.color = notEnoughPointsColor;
+            // Optionally, reset the color after a short delay
+            StartCoroutine(ResetColorAfterDelay(1.0f)); // 1 second delay
+        }
 
+    }
+    private IEnumerator ResetColorAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (tower == null) // Check if a tower has not been built in the meantime
+        {
+            sr.color = startColor;
+        }
     }
 }

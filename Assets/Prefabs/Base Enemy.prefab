@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1252819603730033917}
   - component: {fileID: 6462482451224946640}
-  - component: {fileID: 7022699498596795365}
-  - component: {fileID: 2579484005723052386}
   - component: {fileID: 8295264926517041637}
   - component: {fileID: 7047800605684073830}
+  - component: {fileID: 5214376892777963632}
+  - component: {fileID: 5521856825869656344}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: Base Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,36 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7022699498596795365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5450678901565826807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ed14bc868cafb84c89660d001df1ad2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDead: 0
-  rb: {fileID: 8295264926517041637}
-  worthLives: 1
---- !u!114 &2579484005723052386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5450678901565826807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d066f0f268a99643a4d3e59abdfc904, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 5
-  isDestroyed: 0
-  pointsWorth: 0
 --- !u!50 &8295264926517041637
 Rigidbody2D:
   serializedVersion: 4
@@ -180,3 +150,35 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &5214376892777963632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5450678901565826807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebdaa2c421a8f6346b3acfda38f4c421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDead: 0
+  rb: {fileID: 0}
+  hitPoints: 5
+  isDestroyed: 0
+  pointsWorth: 25
+--- !u!114 &5521856825869656344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5450678901565826807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c68f211d330314b97ee6cba7a0905e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 5450678901565826807}
+  uiPrefab: {fileID: 0}
+  startWave: 1

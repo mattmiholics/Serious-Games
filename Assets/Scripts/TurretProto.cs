@@ -12,11 +12,12 @@ public class TurretProto : MonoBehaviour
     [SerializeField]
     private float projectileSpeed = 20f;
 
+    public DamageType turretDamageType;
+
     public bool boosted = false;
     public float turretRange = 10f;
     public float turretReload = 4f;
 
-    public int pointsRequired = 50;
 
     private float timer = 0f;
     // Start is called before the first frame update
@@ -44,7 +45,7 @@ public class TurretProto : MonoBehaviour
                     turretFiring(enemy);
                 }
                 else if ((Vector3.Distance(transform.position, enemy.transform.position) < Vector3.Distance(transform.position, enemy.transform.position)) 
-                    && enemy.GetComponent<Health>().hitPoints > enemy.GetComponent<Health>().hitPoints)
+                    && enemy.GetComponent<EnemyScript>().hitPoints > enemy.GetComponent<EnemyScript>().hitPoints)
                 {
                     turretFiring(enemy);
                 }
@@ -67,10 +68,12 @@ public class TurretProto : MonoBehaviour
             if (timer < 0f)
             {
                 var projectile = Instantiate(turretProjectile, transform.position, transform.rotation);
+                ProjectileScript projectileScript = projectile.GetComponent<ProjectileScript>();
 
-                projectile.GetComponent<ProjectileScript>().target = turretTarget.transform;
+                projectileScript.target = turretTarget.transform;
 
-                projectile.GetComponent<ProjectileScript>().speed = projectileSpeed;
+                projectileScript.speed = projectileSpeed;
+                projectileScript.damageType = turretDamageType;
 
                 timer = turretReload;
             }

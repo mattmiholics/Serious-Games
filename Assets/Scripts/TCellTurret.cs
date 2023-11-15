@@ -8,6 +8,7 @@ public class TCellTurret : MonoBehaviour
 
     public float turretRange = 10f;
 
+
     private void Update()
     {
         foreach (GameObject tower in gameManager.towersList)

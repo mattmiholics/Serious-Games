@@ -11,34 +11,35 @@ public class GameManager : MonoBehaviour
     public Transform startPoint;
     public Transform[] path;
 
-    public int points;
+    public int points = 200;
     public int lives = 100;
 
     private void Awake()
     {
         main = this;
+        
     }
     void Start()
     {
-        points = 100;
+        points = 200;
     }
 
     public void AddPoints(int amount) 
     {
         points += amount;
     }
-    public bool SubtractPoints(int amount)
+    public bool SpendPoints(int amount)
     {
-        if (amount <= points)
+        if (points >= amount)
         {
             points -= amount;
             return true;
         }
-        else 
+        else
         {
+            // Not enough points
             return false;
         }
-        
     }
     public void LoseLives(int amount)
     {

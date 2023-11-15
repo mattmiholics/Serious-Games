@@ -147,3 +147,5 @@ MonoBehaviour:
   sr: {fileID: 4244468646459217143}
   startColor: {r: 0, g: 0, b: 0, a: 0}
   hoverColor: {r: 0.37201852, g: 0.8301887, b: 0.8145001, a: 1}
+  notEnoughPointsColor: {r: 0.8773585, g: 0.79110897, b: 0.13656996, a: 0}
+  gameManager: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}

@@ -6,7 +6,7 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager main;
 
-    public GameObject[] towerPrefabs; 
+    public TowerBlueprint[] towers; 
 
     public int selectedTower = 0;
 
@@ -16,6 +16,10 @@ public class BuildManager : MonoBehaviour
     }
     public GameObject GetSelectedTower()
     {
-        return towerPrefabs[selectedTower];
+        return towers[selectedTower].prefab;
+    }
+    public int GetSelectedTowerCost()
+    {
+        return towers[selectedTower].cost;
     }
 }

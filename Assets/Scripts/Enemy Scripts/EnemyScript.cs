@@ -2,19 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScript : MonoBehaviour
+public abstract class EnemyScript : MonoBehaviour
 {
     public bool isDead = false;
     public Rigidbody2D rb;
 
-    private float moveSpeed = 2f;
+    protected float moveSpeed;
+    protected int worthLives;
+
     private Transform target;
     private int pathIndex = 0;
-    public int worthLives = 1;
+
+    public int hitPoints = 10;
+    public bool isDestroyed = false;
+    public int pointsWorth;
+
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         target = GameManager.main.path[pathIndex];
+        InitializeEnemy();
     }
 
     // Update is called once per frame
@@ -30,15 +37,40 @@ public class EnemyScript : MonoBehaviour
                 Destroy(gameObject);
                 return;
             }
-            else 
+            else
             {
                 target = GameManager.main.path[pathIndex];
             }
         }
     }
+
     private void FixedUpdate()
     {
         Vector2 direction = (target.position - transform.position).normalized;
         rb.velocity = direction * moveSpeed;
     }
+
+    protected abstract bool IsWeakAgainst(DamageType type);
+
+
+    public void TakeDamage(int amount, DamageType type)
+    {
+        if (IsWeakAgainst(type))
+        {
+            amount *= 2; // Double damage if weak against this type
+        }
+
+        hitPoints -= amount;
+
+        if (hitPoints <= 0)
+        {
+            EnemySpawner.onEnemyDestroy.Invoke();
+            GameManager.main.AddPoints(pointsWorth);
+            isDestroyed = true;
+            Destroy(gameObject);
+        }
+    }
+
+    // Initialize enemy-specific properties
+    protected abstract void InitializeEnemy();
 }

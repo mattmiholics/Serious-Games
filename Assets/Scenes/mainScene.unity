@@ -455,8 +455,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -540, y: 313.06}
-  m_SizeDelta: {x: 200, y: 94.119}
+  m_AnchoredPosition: {x: -394.77106, y: 335.11975}
+  m_SizeDelta: {x: 490.4578, y: 49.999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &111162249
 MonoBehaviour:
@@ -1939,7 +1939,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -540, y: 291}
+  m_AnchoredPosition: {x: -249.54, y: 335.12}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &462324723
@@ -7515,6 +7515,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5388913578221132268, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
+      propertyPath: towers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388913578221132268, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
+      propertyPath: towers.Array.data[0]
+      value: 
+      objectReference: {fileID: -6104068671857038350, guid: 8592980e1fbd5f4499eb85324abe921b, type: 3}
+    - target: {fileID: 5388913578221132268, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
+      propertyPath: towers.Array.data[1]
+      value: 
+      objectReference: {fileID: 3370924772667121246, guid: 1e100a532e3a8d84f840e60d08cbf416, type: 3}
+    - target: {fileID: 5388913578221132268, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: towerPrefabs.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -7540,7 +7552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: points
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: startPoint
@@ -7594,6 +7606,30 @@ PrefabInstance:
       propertyPath: path.Array.data[11]
       value: 
       objectReference: {fileID: 206687165}
+    - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
+      propertyPath: towersList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
+      propertyPath: enemiesList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
+      propertyPath: towersList.Array.data[0]
+      value: 
+      objectReference: {fileID: 6302248375910402296, guid: 8592980e1fbd5f4499eb85324abe921b, type: 3}
+    - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
+      propertyPath: towersList.Array.data[1]
+      value: 
+      objectReference: {fileID: 746619374326676770, guid: 1e100a532e3a8d84f840e60d08cbf416, type: 3}
+    - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
+      propertyPath: enemiesList.Array.data[0]
+      value: 
+      objectReference: {fileID: 5450678901565826807, guid: 4cdf868eaac6464438be4f2315f05849, type: 3}
+    - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
+      propertyPath: enemiesList.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

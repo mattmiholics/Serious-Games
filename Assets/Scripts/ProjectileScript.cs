@@ -13,6 +13,8 @@ public class ProjectileScript : MonoBehaviour
     private float elapsedTime;
     private float distance;
 
+    public DamageType damageType;
+
     private void Start()
     {
         distance = Vector3.Distance(transform.position, target.position);
@@ -34,7 +36,7 @@ public class ProjectileScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+        collision.gameObject.GetComponent<EnemyScript>().TakeDamage(damage, damageType);
         Destroy(gameObject);
     }
 }
