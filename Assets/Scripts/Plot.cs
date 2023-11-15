@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Plot : MonoBehaviour
 {
@@ -15,6 +16,14 @@ public class Plot : MonoBehaviour
     {
         gameManager = FindAnyObjectByType<GameManager>();
         startColor = sr.color; 
+    }
+    private void Update()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            // If it is, return and do nothing more in this update
+            return;
+        }
     }
 
     // Update is called once per frame

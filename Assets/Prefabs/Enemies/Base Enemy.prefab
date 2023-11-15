@@ -180,5 +180,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 5450678901565826807}
-  uiPrefab: {fileID: 0}
+  uiPrefab: {fileID: 7408027931041950215, guid: c1960b43df260da4a82b144cf3071ce3, type: 3}
   startWave: 1

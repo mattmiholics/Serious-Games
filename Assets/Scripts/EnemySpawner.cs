@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private bool isSpawning = false;
 
     public static EnemySpawner main;
+    public Transform uiParent;
 
     private HashSet<int> spawnedEnemyTypes;
 
@@ -66,11 +68,11 @@ public class EnemySpawner : MonoBehaviour
         GameManager.main.enemiesList.Add(Instantiate(typeToSpawn.prefab, GameManager.main.startPoint.position, Quaternion.identity));
 
         // Check if this enemy type has been spawned before
-        //if (!spawnedEnemyTypes.Contains(Array.IndexOf(enemyTypes, typeToSpawn)))
+        if (!spawnedEnemyTypes.Contains(Array.IndexOf(enemyTypes, typeToSpawn)))
         {
             // Spawn UI prefab for the first time
-            //Instantiate(typeToSpawn.uiPrefab, /* position and rotation */);
-            //spawnedEnemyTypes.Add(Array.IndexOf(enemyTypes, typeToSpawn));
+            SpawnUI(typeToSpawn);
+            spawnedEnemyTypes.Add(Array.IndexOf(enemyTypes, typeToSpawn));
         }
     }
 
@@ -100,5 +102,10 @@ public class EnemySpawner : MonoBehaviour
     private int EnemiesPerWave()
     {
         return Mathf.RoundToInt(baseEnemies*Mathf.Pow(currantWave,difficultyScalar));
+    }
+    void SpawnUI(EnemyType typeToSpawn)
+    {
+        Instantiate(typeToSpawn.uiPrefab, uiParent);
+        Time.timeScale = 0; // This pauses the game
     }
 }
