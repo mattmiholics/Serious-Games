@@ -602,6 +602,7 @@ RectTransform:
   - {fileID: 1621564363}
   - {fileID: 768300965}
   - {fileID: 1053289138}
+  - {fileID: 535704003}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2201,6 +2202,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &535704002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 535704003}
+  m_Layer: 5
+  m_Name: firstTimeParrent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &535704003
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535704002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 126280272}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.2608, y: 1.2608}
+  m_SizeDelta: {x: 561.4341, y: 236.1609}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &548043708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6901,13 +6937,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6302248375910402296, guid: 8592980e1fbd5f4499eb85324abe921b, type: 3}
     - target: {fileID: 8374686707133084208, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
+      propertyPath: uiParent
+      value: 
+      objectReference: {fileID: 535704003}
+    - target: {fileID: 8374686707133084208, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: enemyTypes.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8374686707133084208, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: enemyTypes.Array.data[0]
       value: 
       objectReference: {fileID: 5521856825869656344, guid: 4cdf868eaac6464438be4f2315f05849, type: 3}
+    - target: {fileID: 8374686707133084208, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
+      propertyPath: enemyTypes.Array.data[1]
+      value: 
+      objectReference: {fileID: 4203930924721458617, guid: 0f80562aae083ac46b9d47a3ae27d698, type: 3}
     - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: lives
       value: 100
@@ -6970,11 +7014,11 @@ PrefabInstance:
       objectReference: {fileID: 206687165}
     - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: towersList.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: enemiesList.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: towersList.Array.data[0]
@@ -6983,7 +7027,7 @@ PrefabInstance:
     - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: towersList.Array.data[1]
       value: 
-      objectReference: {fileID: 746619374326676770, guid: 1e100a532e3a8d84f840e60d08cbf416, type: 3}
+      objectReference: {fileID: 6257024558012306779, guid: 0f80562aae083ac46b9d47a3ae27d698, type: 3}
     - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: enemiesList.Array.data[0]
       value: 
@@ -6991,7 +7035,7 @@ PrefabInstance:
     - target: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
       propertyPath: enemiesList.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 746619374326676770, guid: 1e100a532e3a8d84f840e60d08cbf416, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
