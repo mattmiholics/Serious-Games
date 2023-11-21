@@ -6,12 +6,17 @@ public class Macrophage : MonoBehaviour
 {
     [SerializeField]
     private GameManager gameManager;
+    [SerializeField]
+    private GameObject turretProjectile;
+    [SerializeField]
+    private float projectileSpeed = 20f;
+
+    public DamageType turretDamageType;
 
     public float turretRange = 5f;
     public float turretReload = 7f;
     public bool boosted = false;
 
-    private float elapsedTime;
     private float timer = 0f;
     // Update is called once per frame
     void Update()
@@ -24,22 +29,39 @@ public class Macrophage : MonoBehaviour
             {
                 if (Vector3.Distance(transform.position, enemy.transform.position) <= turretRange)
                 {
-                    elapsedTime += Time.deltaTime;
-                    var speed = 10f;
-                    var distance = Vector3.Distance(transform.position, enemy.transform.position);
-                    var flightTime = distance / speed;
-                    float completion = elapsedTime / flightTime;
-                    if(timer < 0f)
-                    {
-                        enemy.transform.position = Vector3.Lerp(enemy.transform.position, transform.position, completion);
-                    }
+                    turretFiring(enemy);
+                }
+                else if ((Vector3.Distance(transform.position, enemy.transform.position) < Vector3.Distance(transform.position, enemy.transform.position))
+                    && enemy.GetComponent<EnemyScript>().hitPoints > enemy.GetComponent<EnemyScript>().hitPoints)
+                {
+                    turretFiring(enemy);
                 }
             }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void turretFiring(GameObject turretTarget)
     {
-        Destroy(collision.gameObject);
+        if (turretTarget != null)
+        {
+            Vector3 direction = turretTarget.transform.position - transform.position;
+
+            float RotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            transform.rotation = Quaternion.Euler(0, 0, RotationZ);
+
+            if (timer < 0f)
+            {
+                var projectile = Instantiate(turretProjectile, transform.position, transform.rotation);
+                ProjectileScript projectileScript = projectile.GetComponent<ProjectileScript>();
+
+                projectileScript.target = turretTarget.transform;
+
+                projectileScript.speed = projectileSpeed;
+                projectileScript.damageType = turretDamageType;
+
+                timer = turretReload;
+            }
+        }
     }
 }

@@ -178,10 +178,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDead: 0
-  rb: {fileID: 4981137760948949558}
-  worthLives: 0
-  moveSpeed: 2
   isSlowed: 0
+  rb: {fileID: 4981137760948949558}
+  worthLives: 1
+  moveSpeed: 2
   hitPoints: 3
   isDestroyed: 0
   pointsWorth: 50
