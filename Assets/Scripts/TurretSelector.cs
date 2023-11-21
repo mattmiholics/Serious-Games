@@ -10,11 +10,10 @@ public class TurretSelector : MonoBehaviour, IPointerEnterHandler, IPointerClick
 
     private string[] towerDescriptions = {
         "Attacks and consumes viruses it comes into contact with. It's a basic but essential defense, effective against common viral enemies.",
-        "Enhances the power and range of nearby towers, representing the role of T-cells in coordinating the immune response",
-        "Vaccine Center Description",
-        "Neutrophil Description",
-        "Macrophage Description",
-        "Dendric Cell Description"
+        "T-Cel agitates the immune system and slows Nearby Enemies in range.",
+        "Temporarily enhance the body's immune system, blocking parts of the paths for all enemies.",
+        "Macrophage Attacks and consumes viruses and mutated cells, it deals heavy damage but have a long reload.",
+        "Dendric Cell is an antigen-presenting cell, it enhances nearby towers' attack powers for a period when the enemy is in range."
 
     };
 

@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c68f211d330314b97ee6cba7a0905e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  uiPrefab: {fileID: 0}
+  prefab: {fileID: 9107375863157249115}
+  uiPrefab: {fileID: 7408027931041950215, guid: f3933908928bedf49a524fc2ecfffa60, type: 3}
   startWave: 5
 --- !u!114 &7990095530867715278
 MonoBehaviour:
@@ -112,12 +112,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 57056ed682e25f5468f761eef9524d48, type: 3}
-  m_Color: {r: 0.11120505, g: 0.46226418, b: 0.13977964, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3604ab8b2f45a04429d4d0462998a403, type: 3}
+  m_Color: {r: 0.4784314, g: 0.8196079, b: 0.18039216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.69, y: 2.89}
+  m_Size: {x: 2.72, y: 2.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
