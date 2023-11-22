@@ -22,7 +22,7 @@ public class Macrophage : MonoBehaviour
     void Update()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        timer = Time.deltaTime;
+        timer -= Time.deltaTime;
         foreach (GameObject enemy in gameManager.enemiesList)
         {
             if (enemy)
@@ -57,6 +57,7 @@ public class Macrophage : MonoBehaviour
 
                 projectileScript.target = turretTarget.transform;
 
+                projectileScript.damage = turretTarget.GetComponent<EnemyScript>().hitPoints;
                 projectileScript.speed = projectileSpeed;
                 projectileScript.damageType = turretDamageType;
 

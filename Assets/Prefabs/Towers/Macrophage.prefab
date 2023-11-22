@@ -103,7 +103,7 @@ MonoBehaviour:
   gameManager: {fileID: 8627437954030387806, guid: b3032a6e45fa64f4d91ebd0a1310f978, type: 3}
   turretProjectile: {fileID: 6795922605708953037, guid: b221b63489da51847b71a0c72072a2de, type: 3}
   projectileSpeed: 10
-  turretDamageType: 0
+  turretDamageType: 2
   turretRange: 5
   turretReload: 7
   boosted: 0
