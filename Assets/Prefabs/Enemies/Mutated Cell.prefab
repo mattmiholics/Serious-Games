@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2049668850568339824}
   - component: {fileID: 4286048302604921220}
   - component: {fileID: 1520956522826789524}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mutated Cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 9107375863157249115}
-  uiPrefab: {fileID: 7408027931041950215, guid: f3933908928bedf49a524fc2ecfffa60, type: 3}
+  uiPrefab: {fileID: 7408027931041950215, guid: 2d77193757483c446ade6bb7b241855b, type: 3}
   startWave: 3
 --- !u!114 &7990095530867715278
 MonoBehaviour:
@@ -265,6 +265,10 @@ PrefabInstance:
     - target: {fileID: 4987586259295593203, guid: 4d97ef7879b912e4ba2379c51e1a9340, type: 3}
       propertyPath: m_Name
       value: HitFx
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987586259295593203, guid: 4d97ef7879b912e4ba2379c51e1a9340, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

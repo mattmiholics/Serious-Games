@@ -12,6 +12,6 @@ public class FungalCellEnemy : EnemyScript
 
     protected override bool IsWeakAgainst(DamageType type)
     {
-        return type == null;
+        return type == DamageType.Standard;
     }
 }
