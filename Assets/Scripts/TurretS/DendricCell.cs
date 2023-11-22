@@ -16,11 +16,7 @@ public class DendricCell : MonoBehaviour
     private float activeTimer = 0f;
     private bool active = false;
     // Update is called once per frame
-    private void OnDrawGizmosSelected()
-    {
-        UnityEditor.Handles.color = Color.red;
-        UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, turretRange);
-    }
+   
 
     void Update()
     {
