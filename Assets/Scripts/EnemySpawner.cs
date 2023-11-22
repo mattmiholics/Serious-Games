@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -24,6 +25,12 @@ public class EnemySpawner : MonoBehaviour
 
     private HashSet<int> spawnedEnemyTypes;
 
+    public Button waveButton;
+    public Image pauseImg;
+    public Image playImg;
+    private enum GameState { Playing, Paused, BetweenWaves }
+    private GameState currentState = GameState.BetweenWaves;
+
     public static UnityEvent onEnemyDestroy = new UnityEvent();
 
     void Awake()
@@ -35,28 +42,32 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
+        waveButton.onClick.AddListener(OnWaveButtonClicked); 
         StartCoroutine(StartWave());
         main = this;
     }
     void Update()
     {
-        if (!isSpawning) return;
-        timeSinceLastSpawn += Time.deltaTime;
-
-        if (timeSinceLastSpawn >= (1f / enemiesPerSecond) && enemiesLeftToSpawn > 0)
+        if (currentState == GameState.Playing)
         {
-            SpawnEnemies();
+            if (!isSpawning) return;
+            timeSinceLastSpawn += Time.deltaTime;
 
-            enemiesLeftToSpawn--;
-            enemiesAlive++;
+            if (timeSinceLastSpawn >= (1f / enemiesPerSecond) && enemiesLeftToSpawn > 0)
+            {
+                SpawnEnemies();
 
-            timeSinceLastSpawn = 0f;
-        }
+                enemiesLeftToSpawn--;
+                enemiesAlive++;
 
-        if(enemiesAlive == 0 && enemiesLeftToSpawn == 0)
-        {
-            EndWave();
-        }
+                timeSinceLastSpawn = 0f;
+            }
+
+            if (enemiesAlive == 0 && enemiesLeftToSpawn == 0)
+            {
+                EndWave();
+            }
+        } 
     }
     void EnemyDestroyed() 
     {
@@ -67,37 +78,72 @@ public class EnemySpawner : MonoBehaviour
         EnemyType typeToSpawn = SelectEnemyType();
         GameManager.main.enemiesList.Add(Instantiate(typeToSpawn.prefab, GameManager.main.startPoint.position, Quaternion.identity));
 
-        // Check if this enemy type has been spawned before
         if (!spawnedEnemyTypes.Contains(Array.IndexOf(enemyTypes, typeToSpawn)))
         {
-            // Spawn UI prefab for the first time
             SpawnUI(typeToSpawn);
             spawnedEnemyTypes.Add(Array.IndexOf(enemyTypes, typeToSpawn));
         }
     }
 
+    void OnWaveButtonClicked()
+    {
+        if (currentState == GameState.BetweenWaves)
+        {
+            StartCoroutine(StartWave());
+        }
+        else if (currentState == GameState.Paused)
+        {
+            ResumeGame();
+        }
+        else if (currentState == GameState.Playing)
+        {
+            PauseGame();
+        }
+    }
+
     public EnemyType SelectEnemyType()
     {
-        // Logic to select enemy type based on current wave
         for (int i = enemyTypes.Length - 1; i >= 0; i--)
         {
             if (currantWave >= enemyTypes[i].startWave)
                 return enemyTypes[i];
         }
-        return enemyTypes[0]; // Default to the first type if none match
+        return enemyTypes[0]; 
     }
     IEnumerator StartWave()
     {
+
         yield return new WaitForSeconds(timeBetweenWaves);
         isSpawning = true;
         enemiesLeftToSpawn = EnemiesPerWave();
+        currentState = GameState.Playing;
+        Time.timeScale = 1; // Ensure game is unpaused
     }
+
     void EndWave()
     {
         isSpawning = false;
         timeSinceLastSpawn = 0f;
         currantWave++;
-        StartCoroutine(StartWave());
+        currentState = GameState.BetweenWaves;
+        waveButton.gameObject.SetActive(true); // Show the button
+    }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0;
+        currentState = GameState.Paused;
+        pauseImg.gameObject.SetActive(true);
+        playImg.gameObject.SetActive(false);
+    }
+
+    void ResumeGame()
+    {
+        Time.timeScale = 1;
+        currentState = GameState.Playing;
+        pauseImg.gameObject.SetActive(false);
+        playImg.gameObject.SetActive(true);
+
     }
     private int EnemiesPerWave()
     {
@@ -106,6 +152,6 @@ public class EnemySpawner : MonoBehaviour
     void SpawnUI(EnemyType typeToSpawn)
     {
         Instantiate(typeToSpawn.uiPrefab, uiParent);
-        Time.timeScale = 0; // This pauses the game
+        Time.timeScale = 0; 
     }
 }

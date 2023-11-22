@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class Plot : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Plot : MonoBehaviour
     [SerializeField] private Color hoverColor;
     [SerializeField] private Color notEnoughPointsColor;
     [SerializeField] private GameManager gameManager;
+
+    public UnityEvent towerBuild;
 
     void Start()
     {
@@ -43,6 +46,7 @@ public class Plot : MonoBehaviour
 
         if (gameManager.SpendPoints(towerCost))
         {
+            towerBuild.Invoke();
             GameObject towerPrefab = BuildManager.main.GetSelectedTower();
             tower = Instantiate(towerPrefab, transform.position, Quaternion.identity);
             gameManager.towersList.Add(tower);
