@@ -35,6 +35,7 @@ public class DendricCell : MonoBehaviour
                 {
                     if (reloadTimer < 0 && !active)
                     {
+                        Debug.Log("Dendric: Active");
                         active = true;
                         activeTimer = boostTimer;
                     }
@@ -75,7 +76,7 @@ public class DendricCell : MonoBehaviour
                 if (tower.GetComponent<TurretProto>())
                 {
                     if (tower.GetComponent<TurretProto>().boosted)
-                    {
+                    {;
                         tower.GetComponent<TurretProto>().turretReload = tempReload;
                         tower.GetComponent<TurretProto>().boosted = false;
                     }
@@ -91,7 +92,7 @@ public class DendricCell : MonoBehaviour
             }
         }
 
-        while (active)
+        if (active)
         {
             activeTimer -= Time.deltaTime;
             if(activeTimer < 0)
