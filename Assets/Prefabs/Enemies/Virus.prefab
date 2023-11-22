@@ -165,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6257024558012306779}
   uiPrefab: {fileID: 7408027931041950215, guid: f3933908928bedf49a524fc2ecfffa60, type: 3}
-  startWave: 3
+  startWave: 2
 --- !u!114 &4804623249005370030
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -97,6 +97,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (currentState == GameState.Playing)
         {
+            
             PauseGame();
         }
     }
@@ -126,24 +127,27 @@ public class EnemySpawner : MonoBehaviour
         timeSinceLastSpawn = 0f;
         currantWave++;
         currentState = GameState.BetweenWaves;
-        waveButton.gameObject.SetActive(true); // Show the button
+        pauseImg.gameObject.SetActive(false);
+        playImg.gameObject.SetActive(true);
     }
 
     void PauseGame()
     {
         Time.timeScale = 0;
         currentState = GameState.Paused;
+
         pauseImg.gameObject.SetActive(true);
         playImg.gameObject.SetActive(false);
+
     }
 
     void ResumeGame()
     {
         Time.timeScale = 1;
         currentState = GameState.Playing;
+
         pauseImg.gameObject.SetActive(false);
         playImg.gameObject.SetActive(true);
-
     }
     private int EnemiesPerWave()
     {
