@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class EnemyScript : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public abstract class EnemyScript : MonoBehaviour
     public bool isSlowed = false;
     public Rigidbody2D rb;
 
+    public UnityEvent hitEvent;
+    public UnityEvent dieEvent;
 
     public int worthLives;
 
@@ -65,12 +68,14 @@ public abstract class EnemyScript : MonoBehaviour
         }
 
         hitPoints -= amount;
+        hitEvent.Invoke();
 
         if (hitPoints <= 0)
         {
             EnemySpawner.onEnemyDestroy.Invoke();
             GameManager.main.AddPoints(pointsWorth);
             isDestroyed = true;
+            dieEvent.Invoke();
             Destroy(gameObject);
         }
     }
