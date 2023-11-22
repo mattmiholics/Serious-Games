@@ -65,11 +65,17 @@ MonoBehaviour:
   isDead: 0
   isSlowed: 0
   rb: {fileID: 3948726719664702744}
+  hitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dieEvent:
+    m_PersistentCalls:
+      m_Calls: []
   worthLives: 1
   moveSpeed: 7
   hitPoints: 2
   isDestroyed: 0
-  pointsWorth: 10
+  pointsWorth: 50
 --- !u!50 &3948726719664702744
 Rigidbody2D:
   serializedVersion: 4

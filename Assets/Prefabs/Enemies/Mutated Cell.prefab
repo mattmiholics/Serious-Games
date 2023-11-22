@@ -66,11 +66,17 @@ MonoBehaviour:
   isDead: 0
   isSlowed: 0
   rb: {fileID: 4286048302604921220}
+  hitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dieEvent:
+    m_PersistentCalls:
+      m_Calls: []
   worthLives: 1
   moveSpeed: 1
   hitPoints: 4
   isDestroyed: 0
-  pointsWorth: 0
+  pointsWorth: 35
 --- !u!212 &2049668850568339824
 SpriteRenderer:
   m_ObjectHideFlags: 0

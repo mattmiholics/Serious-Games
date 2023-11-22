@@ -10,7 +10,7 @@ public abstract class EnemyScript : MonoBehaviour
     public Rigidbody2D rb;
 
     public UnityEvent hitEvent;
-    public UnityEvent dieEvent;
+    public GameObject deathEffect;
 
     public int worthLives;
 
@@ -72,11 +72,13 @@ public abstract class EnemyScript : MonoBehaviour
 
         if (hitPoints <= 0)
         {
+            
             EnemySpawner.onEnemyDestroy.Invoke();
             GameManager.main.AddPoints(pointsWorth);
             isDestroyed = true;
-            dieEvent.Invoke();
+            GameObject deathEffectClone = Instantiate(deathEffect, this.transform.position, this.transform.rotation);
             Destroy(gameObject);
+            Destroy(deathEffectClone, 2);
         }
     }
 
