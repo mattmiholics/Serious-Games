@@ -49,6 +49,15 @@ public abstract class EnemyScript : MonoBehaviour
                 target = GameManager.main.path[pathIndex];
             }
         }
+        GameObject child = transform.Find("Slowed").gameObject;
+        if (isSlowed)
+        {
+            child.SetActive(true);
+        }
+        else
+        {
+            child.SetActive(false);
+        }
     }
 
     private void FixedUpdate()
