@@ -21,6 +21,7 @@ public class Macrophage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var child = transform.Find("Boosted").gameObject;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         timer -= Time.deltaTime;
         foreach (GameObject enemy in gameManager.enemiesList)
@@ -36,6 +37,20 @@ public class Macrophage : MonoBehaviour
                 {
                     turretFiring(enemy);
                 }
+            }
+        }
+
+        if (child)
+        {
+            child.transform.position = new Vector3(transform.position.x - 0.2f, transform.position.y - 0.2f, transform.position.z);
+            child.transform.rotation = Quaternion.Euler(0, 0, 0);
+            if (boosted)
+            {
+                child.SetActive(true);
+            }
+            else
+            {
+                child.SetActive(false);
             }
         }
     }

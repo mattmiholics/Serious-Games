@@ -46,7 +46,7 @@ public class DendricCell : MonoBehaviour
         foreach (GameObject tower in gameManager.towersList)
         {
             var tempReload = 5f;
-            if (Vector3.Distance(transform.position, tower.transform.position) <= turretRange && active)
+            if (tower && Vector3.Distance(transform.position, tower.transform.position) <= turretRange && active)
             {
                 if (tower.GetComponent<TurretProto>())
                 {
@@ -63,11 +63,11 @@ public class DendricCell : MonoBehaviour
                     {
                         tempReload = tower.GetComponent<Macrophage>().turretReload;
                         tower.GetComponent<Macrophage>().turretReload *= 0.6f;
-                        tower.GetComponent<TurretProto>().boosted = true;
+                        tower.GetComponent<Macrophage>().boosted = true;
                     }
                 }
             }
-            else
+            else if(tower)
             {
                 if (tower.GetComponent<TurretProto>())
                 {
@@ -82,7 +82,7 @@ public class DendricCell : MonoBehaviour
                     if (tower.GetComponent<Macrophage>().boosted)
                     {
                         tower.GetComponent<Macrophage>().turretReload = tempReload;
-                        tower.GetComponent<TurretProto>().boosted = false;
+                        tower.GetComponent<Macrophage>().boosted = false;
                     }
                 }
             }
