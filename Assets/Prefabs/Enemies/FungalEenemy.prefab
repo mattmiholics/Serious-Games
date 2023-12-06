@@ -167,6 +167,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   deathEffect: {fileID: 4987586259295593203, guid: b666cabfa66c98a47abd9f11567ef2ca, type: 3}
+  mainSource: {fileID: 0}
+  deathSFX: {fileID: 8300000, guid: b31893c5e269c1345ad0a3196396c6c9, type: 3}
   worthLives: 1
   moveSpeed: 7
   hitPoints: 2

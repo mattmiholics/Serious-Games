@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Macrophage : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Macrophage : MonoBehaviour
     public float turretRange = 5f;
     public float turretReload = 7f;
     public bool boosted = false;
+
+    public UnityEvent onFire;
 
     private float timer = 0f;
     // Update is called once per frame
@@ -59,6 +62,8 @@ public class Macrophage : MonoBehaviour
     {
         if (turretTarget != null)
         {
+            
+
             Vector3 direction = turretTarget.transform.position - transform.position;
 
             float RotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -66,7 +71,9 @@ public class Macrophage : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, RotationZ);
 
             if (timer < 0f)
-            {
+            { 
+                onFire.Invoke();
+
                 var projectile = Instantiate(turretProjectile, transform.position, transform.rotation);
                 ProjectileScript projectileScript = projectile.GetComponent<ProjectileScript>();
 

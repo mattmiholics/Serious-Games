@@ -14,6 +14,8 @@ public class Plot : MonoBehaviour
     [SerializeField] private GameManager gameManager;
 
     public UnityEvent towerBuild;
+    public UnityEvent towerFailed;
+
 
     void Start()
     {
@@ -53,6 +55,7 @@ public class Plot : MonoBehaviour
         }
         else
         {
+            towerFailed.Invoke();
             // Change color to indicate not enough points
             sr.color = notEnoughPointsColor;
             // Optionally, reset the color after a short delay

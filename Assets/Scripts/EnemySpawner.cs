@@ -31,7 +31,9 @@ public class EnemySpawner : MonoBehaviour
     private enum GameState { Playing, Paused, BetweenWaves }
     private GameState currentState = GameState.BetweenWaves;
 
-    public static UnityEvent onEnemyDestroy = new UnityEvent();
+    public static UnityEvent onEnemyDestroy;
+    public UnityEvent enemyDestroy;
+    public UnityEvent waveEnd;
 
     void Awake()
     {
@@ -71,6 +73,7 @@ public class EnemySpawner : MonoBehaviour
     }
     void EnemyDestroyed() 
     {
+        enemyDestroy.Invoke();
         enemiesAlive--;
     }
     void SpawnEnemies()
@@ -123,6 +126,7 @@ public class EnemySpawner : MonoBehaviour
 
     void EndWave()
     {
+        waveEnd.Invoke();
         isSpawning = false;
         timeSinceLastSpawn = 0f;
         currantWave++;

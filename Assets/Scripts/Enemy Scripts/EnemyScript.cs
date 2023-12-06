@@ -11,6 +11,8 @@ public abstract class EnemyScript : MonoBehaviour
 
     public UnityEvent hitEvent;
     public GameObject deathEffect;
+    public AudioSource mainSource;
+    public AudioClip deathSFX;
 
     public int worthLives;
 
@@ -40,6 +42,7 @@ public abstract class EnemyScript : MonoBehaviour
             if (pathIndex == GameManager.main.path.Length)
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
+                
                 GameManager.main.LoseLives(worthLives);
                 Destroy(gameObject);
                 return;
@@ -86,6 +89,7 @@ public abstract class EnemyScript : MonoBehaviour
             GameManager.main.AddPoints(pointsWorth);
             isDestroyed = true;
             GameObject deathEffectClone = Instantiate(deathEffect, this.transform.position, this.transform.rotation);
+            mainSource.PlayOneShot(deathSFX);
             Destroy(gameObject);
             Destroy(deathEffectClone, 2);
         }

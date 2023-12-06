@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.Events;
 
 public class TurretProto : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class TurretProto : MonoBehaviour
     public float turretRange = 10f;
     public float turretReload = 4f;
 
+    public UnityEvent onFire;
 
     private float timer = 0f;
     // Start is called before the first frame update
@@ -81,6 +83,8 @@ public class TurretProto : MonoBehaviour
 
             if (timer < 0f)
             {
+                onFire.Invoke();
+
                 var projectile = Instantiate(turretProjectile, transform.position, transform.rotation);
                 ProjectileScript projectileScript = projectile.GetComponent<ProjectileScript>();
 
