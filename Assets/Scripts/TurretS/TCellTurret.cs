@@ -17,6 +17,10 @@ public class TCellTurret : MonoBehaviour
 
     private void Update()
     {
+        TCellFunction();
+    }
+    public void TCellFunction()
+    {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         timer -= Time.deltaTime;
 
