@@ -8,22 +8,25 @@ public class GameManager : MonoBehaviour
     public List<GameObject> towersList = new List<GameObject>();
     public static GameManager main;
 
+    public GameObject loseUI;
+
     public Transform startPoint;
     public Transform[] path;
 
     public int points = 200;
-    public int lives = 100;
+    public int lives = 50;
 
     private void Awake()
     {
         main = this;
-        
+        loseUI.SetActive(false);
+        Time.timeScale = 1;
+
     }
     void Start()
     {
         points = 200;
     }
-
     public void AddPoints(int amount) 
     {
         points += amount;
@@ -44,6 +47,8 @@ public class GameManager : MonoBehaviour
     public void LoseLives(int amount)
     {
         lives -= amount;
+        Time.timeScale = 0;
+        loseUI.SetActive(true);
     }
 
 }

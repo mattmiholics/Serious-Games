@@ -11,4 +11,8 @@ public class LoadNextScene : MonoBehaviour
         // Load the next scene
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene("mainScene");
+    }
 }
